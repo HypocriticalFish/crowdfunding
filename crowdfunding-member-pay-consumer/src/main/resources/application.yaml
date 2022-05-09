@@ -1,0 +1,30 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: crowdfunding-pay
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: localhost
+    password: lovexin
+  session:
+    store-type: redis
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka
+
+ali:
+  pay:
+    alipay-public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnWo0MFOEIJz+d+Cv7mSMrP4Pz0Z0T7b6PD+NRFyRPxMx/ZUNTYDXGHIO25Y1rQW3OJTlY7MC8Yey+mOENmApn2kXJlvqTIoDayvnCeBNAmrlG4d+9ntdTUV9noseASMmoJil9gTGbIC0MTTnGsEwOLXX1Zx/iVHmMEEdKYTOux1TMNLtMzxtZhpQ4/m8bVjWuopi1xHAJTip4AAOYKeOrGbjcER96xi7cJRU87kcI2so+/0UreGwmpok/vP38MQmHo17VRfMh1+5wTHvJ7MkADl/p/FxSM5dS37Oeg+kBVjwOALt51V+Hkbyh8SKAe+rQzTQc4XSa5NP4GocvF89hwIDAQAB
+    app-id: 2021000119690185
+    charset: utf-8
+    gateway-url: https://openapi.alipaydev.com/gateway.do
+    merchant-private-key: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDrI63u6pRHSHbu9HjijeKxNwlkizn4Px31vNFsBi+QuaIgu38aj9BUamqmB8ePsw5/Rr7JYYHFSOmTLl3TnivQbZxqL/VflOL6IzhIDoq4jMWJUfuW/T2MUjfj5S21N/UDGiYbX0KT9mraamoyfJZIrotMil9TFL9vk1Ok5e8e1fKmlzgNq8wz9gUd51Y8oLFxMNXtui/tgRYd4rn2K4nc49nzh1JWaEVIgKLTPHNOtOn50/xC8OHrtB0z5gjRM/XOAyaDc603tD15MgMqs3HOUQQuXDkV0ksjWm0B3jOorpoONh3vBmYZcp3aa5x5WCNnSHv5FvmO2apfVqQOAMxTAgMBAAECggEAJm72hw6gneYiSnx7Jcy7OOweBOkc2I64fuoV8Oox7B3reh4rcFQBYUrjk6/B1qMVw4f0t0XQyEZap0v02hoIX1ELN/AO00iqsOgA0wZNdkzMHN3hmZRa8wydRgq3pd83lQI5KFAxua2VWY37PbVPeyHMcv5LBnFluP8DtPhAVXGis20tgQS7V8bEwMGn33iXsPIYx+vZbHR3+CpqerO8O0E/KWe7xfryEqSv9uHWpEFEwR2TPzk0p/AO13zzyUDGgglFOegivsW7ds+51Z8HWMgy5Ahai75dmP4aMJzB4NXuJ9AnQqhFDRaxJ2fTE1etfm+36F9Fckhrk70A/U4zQQKBgQD8MwEC4eSoY8G8N5bhY1Gesnhp1tmGuFDgc+NM+2RWvOoCqngY2Ww4SjUa4+9Zcf/p8cQQNm5pUs+xIZG/Q3U4qNnHl0Vrl2SwPcwc6vCXDUAo9Ja1mF81IaqJS3SerWfJhIW6Y0fGpcNnFDdIvWSdHpeCiHnzWsjiZWK78STWNQKBgQDurtuWJWpPS9ogkgnkqqXkcN1HtyxWzHfMl2VD8XPeEhRbtwTG1JQ8FURlDagqWY35SG/LPbrHVtHn+M+GZOnDATlByUGlc8CuY9qCIVd6yFeCB/w6KtW05hFRrRHEdByWFqJ0TZ6zlvbzhY9F5Ju/4F6ctjmorPJu+Y523+PJZwKBgQCuUMqYJW6YfSsBXyLocm+N0ymrbhc4KNmt6ivnn7MAyN6uLQmJk25bkd8W0Qk0t7j9CGBOHHFAVz663csRehzhpsOwUvxmm2O69VvJeRIGNeBs7nHk3oagAL8Q2pimvJCKFxEffVO1GAnxi2WS32VVvDlYveActlk3MoCGCu09KQKBgEG8wxnNYERKvd7ume7y2RHby/YuivW1BuHAaNGXtLPbAuRnudcRQWpy6Q1z/3b6h1G7E59Edybj0Jg1POLk9EUTFzP5PC1XfiAJvGrOyAs3FnLnxB45IfbazrZSFmynFiB4R3IE1srbr1RO2rEDT6o/H4/F2IeOao8KCKTQ8SnNAoGBAIPZosEtNfrcAW3g//o287kF/5doII1wkMtBRb7u3Y4vEV0Vm88V/LaeBmgYDVn271Q2T5wj7oHodzt8H+Y/0D80BzLku1gzOEd4fN7XzQTQ39AIC+GgxibF0woIsZghr41hBn4WoWnh0dmZqPQy4UOLW0XyXfm4DAhk/KnSNlgY
+    notify-url: http://grekcv.natappfree.cc/pay/notify
+    return-url: http://localhost/pay/return
+    sign-type: RSA2

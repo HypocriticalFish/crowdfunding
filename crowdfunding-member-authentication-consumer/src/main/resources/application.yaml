@@ -1,0 +1,23 @@
+server:
+  port: 4000
+
+spring:
+  application:
+    name: crowdfunding-auth
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: localhost
+    password: lovexin
+  session:
+    store-type: redis
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka
+short:
+  message:
+    appcode: c91e49f1530242858bed37c751f5ed07
+    templateId: '0002'

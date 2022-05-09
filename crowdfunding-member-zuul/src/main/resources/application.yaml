@@ -1,0 +1,39 @@
+server:
+  port: 80
+spring:
+  application:
+    name: crowdfunding-zuul
+  redis:
+    host: localhost
+    password: lovexin
+  session:
+    store-type: redis
+  servlet:
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 10MB
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka
+
+zuul:
+  ignored-services: "*"
+  sensitive-headers: "*"
+  routes:
+    crowdfunding-portal:
+      service-id: crowdfunding-auth
+      path: /**
+    crowdfunding-project:
+      service-id: crowdfunding-project
+      path: /project/**
+    crowdfunding-order:
+      service-id: crowdfunding-order
+      path: /order/**
+    crowdfunding-pay:
+      service-id: crowdfunding-pay
+      path: /pay/**
+
+
+
