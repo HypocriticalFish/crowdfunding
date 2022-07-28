@@ -24,8 +24,8 @@ eureka:
 
 aliyun:
   oss:
-    access-key-id: LTAI5t7ZEkXZ5hSxqbyvdVkC
-    access-key-secret: ZHc7myqAMyTeeelPP0DenkZsZrScgi
+    access-key-id: # 阿里云OSS id
+    access-key-secret: # 阿里云OSS 密钥
     bucket-domain: http://hypofish-crowdfunding.oss-cn-shanghai.aliyuncs.com
     bucket-name: hypofish-crowdfunding
     end-point: http://oss-cn-shanghai.aliyuncs.com
